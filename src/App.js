@@ -1,6 +1,6 @@
 import Home from './Home';
 import StarWars from './StarWars';
-import './App.css';
+import './Display.css';
 
 
 function App() {

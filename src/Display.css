@@ -1,21 +1,24 @@
 .Display{
     display: grid;
     color: brown;
+    justify-content: center;
+
 }
 
 .StarWars {
     color: brown;
     margin: 5px;
+    text-align: center;
+
 }
 
 .Header {
-    margin: 30px;
-    padding: 10px;
+    margin: 35px;
+    padding: 5px;
     color: brown;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
-    left: 35%;
+    left: 37%;
     gap: 1px;
 }
-  
