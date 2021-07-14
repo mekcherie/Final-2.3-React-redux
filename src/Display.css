@@ -1,0 +1,21 @@
+.Display{
+    display: grid;
+    color: brown;
+}
+
+.StarWars {
+    color: brown;
+    margin: 5px;
+}
+
+.Header {
+    margin: 30px;
+    padding: 10px;
+    color: brown;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+    left: 35%;
+    gap: 1px;
+}
+  

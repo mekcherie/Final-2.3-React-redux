@@ -1,14 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
 import Display from './Display';
+import './Display.css';
 
 function StarWars() {
   const [id, setId] = useState(1);
   const [data, setData] = useState(null);
 
-  async function getCharacter(characterId) {
+  async function getDisplay(displayId) {
     try {
-      const res = await fetch(`https://swapi.dev/api/people/${characterId}/`);
+      const res = await fetch(`https://swapi.dev/api/people/${displayId}/`);
       const json = await res.json();
 
       const name = json.name;
@@ -37,9 +38,9 @@ function StarWars() {
         <input
           onChange={(e) => setId(e.target.value)}
           value={id}
-          placeholder={'Character Id'}
+          placeholder={'Display Id'}
         />
-        <button onClick={() => getCharacter(id)}>Submit</button>
+        <button className="StarWars" onClick={() => getDisplay(id)}>Submit</button>
       </form>
       {data && <Display {...data} />}
     </div>
