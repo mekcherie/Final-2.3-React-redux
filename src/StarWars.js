@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
+import Display from './Display.js';
 import { useDispatch, useSelector } from 'react-redux'
-import { LOAD_CHARACTER } from './actions'
-import Display from './Display'
-import character from './character'
+import { loadDisplay } from './actions'
 
-function Starwars () {
+function StarWars () {
   const dispatch = useDispatch()
 
-  const [characterNumber, setNumber] = useState(0)
-  const [characterList, setList] = useState([])
+  const [displayNumber, setNumber] = useState(0)
+  const [displayList, setList] = useState([])
   const data = useSelector(state => state.character)
 
   return (
@@ -17,7 +17,7 @@ function Starwars () {
         <form
           onSubmit={event => {
             event.preventDefault()
-            dispatch(loadCharacter(characterNumber))
+            dispatch(loadDisplay(displayNumber))
           }}
         >
 
@@ -32,8 +32,8 @@ function Starwars () {
           onSubmit={event => {
             event.preventDefault()
 
-            const character = (
-              <character
+            const display = (
+              <Display
                 name={data[0].name}
                 birthYear={data[0].birth_year}
                 gender={data[0].gender}
@@ -47,7 +47,7 @@ function Starwars () {
               />
             )
 
-            const list = [...characterList, character]
+            const list = [...displayList, display]
             setList(list)
           }}
         >
@@ -58,7 +58,7 @@ function Starwars () {
 
       {data &&
         <div>
-          <character
+          <Display
             name={data[0].name}
             birthYear={data[0].birth_year}
             gender={data[0].gender}
@@ -72,10 +72,10 @@ function Starwars () {
           />
         </div>}
 
-      <Character characterList={characterList} />
+      <Display displayList={displayList} />
 
     </div>
   )
 }
 
-export default Starwars
+export default StarWars

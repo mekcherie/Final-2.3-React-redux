@@ -1,5 +1,5 @@
 import React from 'react'
-import './Display.css'
+import './charactersDisplay.css'
 
 function character (props) {
   const { characterList } = props

@@ -1,12 +1,10 @@
 import React from 'react'
-import './Display.css'
-
-function Display (props) {
-  const { name, birthYear, gender, height, mass, skinColor, hairColor, eyeColor, homeworld, films } = props
-
+function Display(props) {
+  const { name, birthYear, gender, height, mass, skinColor, hairColor, eyeColor, homeworld, films  } = props;
+  
   return (
-    <div className='Display'>
-      <h2>Name: {name}</h2>
+    <div className="Display">
+      <h2>{name}</h2>
       <p>Birth Year: {birthYear}</p>
       <p>Gender: {gender}</p>
       <p>Height: {height}</p>
@@ -15,9 +13,9 @@ function Display (props) {
       <p>Hair Color: {hairColor}</p>
       <p>Eye Color: {eyeColor}</p>
       <p>Homeworld: {homeworld}</p>
-      {films.map(film => <p key={film.title}>Film: {film.title}</p>)}
+      {/* {films.map(film => <p key={film.title}>Film: {film.title}</p>)} */}
     </div>
-  )
+  );
 }
 
-export default Display
+export default Display;
