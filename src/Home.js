@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
+import Title from './Title'
 
-function Home() {
-  return (
-    <div className="Home">
-      <h1>FEW 2.3 Final - Meklit Cherie</h1>
-    </div>
-  );
+function Home(props) {
+    return (
+        <div className = 'title'> 
+            <h2>FEW 2.3 Final</h2>
+            <Title name='Meklit Cherie'/>
+        </div>
+    )
 }
 
 export default Home;
